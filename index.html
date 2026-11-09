@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f1">
+  <title>Small Steps — Your to-do list</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="background" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="orb orb-three"></div></div>
+  <main class="app">
+    <header class="topbar"><a class="brand" href="./" aria-label="Small Steps home"><span class="brand-mark">✳</span> small steps<span class="brand-dot">.</span></a><span class="top-note">A LITTLE MORE SPACE TO THINK</span></header>
+    <section class="workspace" aria-labelledby="page-title">
+      <div class="intro"><div class="eyebrow"><span></span> YOUR PERSONAL SPACE</div><h1 id="page-title">Make room for<br><em>what matters.</em></h1><p>A little structure for a lighter day.</p></div>
+      <div class="card">
+        <div class="card-header"><div><div class="section-label">THE PLAN</div><h2>Things to do <span id="total-count">0</span></h2></div><div class="date" id="today"></div></div>
+        <form id="task-form" class="add-form"><span class="plus" aria-hidden="true">+</span><label class="sr-only" for="task-input">Add a task</label><input id="task-input" placeholder="What’s on your mind?" maxlength="200" autocomplete="off" required><button type="submit">Add task <span aria-hidden="true">↗</span></button></form>
+        <div class="list-toolbar"><div class="filters" role="group" aria-label="Filter tasks"><button class="filter active" data-filter="all" type="button">All <span id="filter-count">0</span></button><button class="filter" data-filter="active" type="button">To do</button><button class="filter" data-filter="completed" type="button">Done</button></div><button id="clear-completed" class="clear" type="button" hidden>Clear done</button></div>
+        <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+        <div id="empty-state" class="empty-state"><div class="empty-icon">✳</div><p>Nothing on the list yet.</p><span>Start small. Add your first task above.</span></div>
+        <div class="card-footer"><span id="progress-text">A fresh start awaits</span><span class="footer-sparkle">✳</span></div>
+      </div>
+      <div class="bottom-note"><span>ONE THING AT A TIME</span><span>✦</span><span>YOU’VE GOT THIS</span></div>
+    </section>
+    <footer class="page-footer"><span>MADE FOR THE IN-BETWEEN MOMENTS</span><span>TAKE IT AT YOUR OWN PACE <span class="heart">♡</span></span></footer>
+  </main>
+</body>
+</html>
